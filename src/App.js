@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import './App.css';
 
 const API_URL = 'https://kanjialive-api.p.rapidapi.com/api/public/kanji/';
 const HEADERS = {
@@ -24,7 +25,23 @@ function App() {
   }
 
   return (
-    <h1>Hello, world!</h1>
+    <div className="app">
+
+      <h1>Hello, world!</h1>
+
+      <div>
+        <br />{kanji.character}
+        <br />{kanji.kunyomi.hiragana}
+        <br />{kanji.meaning.english}
+      </div>
+
+      <div className="search">
+        <input
+
+        />
+      </div>
+
+    </div>
   );
 };
 
