@@ -41,10 +41,18 @@ function App() {
       </div>
 
       {kanji.character ? (
-        <div>
-          <p>Character: {kanji.character}</p>
-          <p>Kunyomi: {kanji.kunyomi.hiragana}</p>
-          <p>Onyomi: {kanji.onyomi.katakana}</p>
+        <div className="kanjiBlock">
+          <img
+            src={kanji.video.poster ? kanji.video.poster : "https://via.placeholder.com/300"}
+            alt="No Image Found"
+          />
+          <div className="divider">
+            <p>Character: {kanji.character}</p>
+            <p>Meaning: {kanji.meaning.english}</p>
+            <p>Kunyomi: {kanji.kunyomi.hiragana}</p>
+            <p>Onyomi: {kanji.onyomi.katakana}</p>
+          </div>
+          
         </div>
       ): (
         <div>
