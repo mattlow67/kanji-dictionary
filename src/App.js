@@ -12,6 +12,7 @@ const HEADERS = {
 
 function App() {
   const [kanji, setKanji] = useState([]);
+  const [searchTerm, setSearchTerm] = useState("");
 
   useEffect(() => {
     searchSingleKanji('雨');
@@ -27,19 +28,29 @@ function App() {
   return (
     <div className="app">
 
-      <h1>Hello, world!</h1>
-
-      <div>
-        <br />{kanji.character}
-        <br />{kanji.kunyomi.hiragana}
-        <br />{kanji.meaning.english}
-      </div>
+      <h1>Kanji App</h1>
 
       <div className="search">
         <input
-
+          value={searchTerm}
+          onChange={(e) => setSearchTerm(e.target.value)}
+          placeholder="Search Kanji"
         />
+        <button onClick={() => searchSingleKanji(searchTerm)}>
+          Search</button>
       </div>
+
+      {kanji.character ? (
+        <div>
+          <p>Character: {kanji.character}</p>
+          <p>Kunyomi: {kanji.kunyomi.hiragana}</p>
+          <p>Onyomi: {kanji.onyomi.katakana}</p>
+        </div>
+      ): (
+        <div>
+          <p>no results found</p>
+        </div>
+      )}
 
     </div>
   );
