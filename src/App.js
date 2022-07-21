@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import './App.css';
-import NavBar from './NavBar';
-import HomePage from './HomePage';
-import KanjiBox from './KanjiBox';
+import NavBar from './components/NavBar';
+import HomePage from './components/HomePage';
+import KanjiBox from './components/KanjiBox';
 
 const API_URL = 'https://kanjialive-api.p.rapidapi.com/api/public/kanji/';
 const HEADERS = {

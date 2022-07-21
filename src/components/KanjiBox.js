@@ -2,7 +2,7 @@ import React from 'react';
 
 function KanjiBox({ kanji }) {
   return (
-    <div>
+    <>
     { kanji.character ? (
 
         <div className="kanjiBlock">
@@ -26,7 +26,7 @@ function KanjiBox({ kanji }) {
         </div>
         )
     }
-  </div>
+  </>
   );
 }
 
