@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import './App.css';
 import NavBar from './NavBar';
 import HomePage from './HomePage';
+import KanjiBox from './KanjiBox';
 
 const API_URL = 'https://kanjialive-api.p.rapidapi.com/api/public/kanji/';
 const HEADERS = {
@@ -46,6 +47,12 @@ function App() {
         setOnHomePage={setOnHomePage}
       />
 
+    { onHomePage ? (
+      <HomePage />
+    ): ( <KanjiBox kanji={kanji}/> )
+    }
+
+    {/*
     {
       onHomePage ? (
         <HomePage />
@@ -70,7 +77,7 @@ function App() {
           )
         )
     }
-    
+    */}
     </div>
   );
 };
