@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './App.css';
 import NavBar from './NavBar';
+import HomePage from './HomePage';
 
 const API_URL = 'https://kanjialive-api.p.rapidapi.com/api/public/kanji/';
 const HEADERS = {
@@ -14,9 +15,11 @@ const HEADERS = {
 function App() {
   const [kanji, setKanji] = useState([]);
   const [searchTerm, setSearchTerm] = useState("");
+  const [onHomePage, setOnHomePage] = useState(true);
 
   useEffect(() => {
-    searchSingleKanji('雨');
+    //searchSingleKanji('雨');
+    setOnHomePage(true);
   }, []);
 
   const searchSingleKanji = async (k) => {
@@ -39,6 +42,16 @@ function App() {
         setSearchTerm={setSearchTerm}
         searchSingleKanji={searchSingleKanji}
       />
+
+    {
+      onHomePage ? (
+        <HomePage />
+      ): (
+        <div>
+          Not on Home Page
+        </div>
+      )
+    }
 
 
     {/*kanji.character ? (
