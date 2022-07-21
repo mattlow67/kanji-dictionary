@@ -18,8 +18,8 @@ function App() {
   const [onHomePage, setOnHomePage] = useState(true);
 
   useEffect(() => {
-    //searchSingleKanji('雨');
     setOnHomePage(true);
+    document.title = "Kanji App"
   }, []);
 
   const searchSingleKanji = async (k) => {
@@ -43,6 +43,7 @@ function App() {
         searchTerm={searchTerm}
         setSearchTerm={setSearchTerm}
         searchSingleKanji={searchSingleKanji}
+        setOnHomePage={setOnHomePage}
       />
 
     {
@@ -69,10 +70,7 @@ function App() {
           )
         )
     }
-
-
-
-
+    
     </div>
   );
 };

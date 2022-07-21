@@ -11,15 +11,30 @@ body {
   flex-direction: column;
 }
 
+.container {
+  width: 80%;
+  display: flex;
+}
+
 h1 {
   width: fit-content;
+}
+
+.navbar {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: row;
+}
+
+.navbar img {
+  cursor: pointer;
 }
 
 .search {
   width: 20%;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  align-items: flex-start;
 }
 
 .search input {

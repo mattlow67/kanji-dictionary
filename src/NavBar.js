@@ -1,13 +1,16 @@
 import React from 'react';
 
-const NavBar = ({searchTerm, setSearchTerm, searchSingleKanji}) => {
+const NavBar = ({searchTerm, setSearchTerm, searchSingleKanji, setOnHomePage}) => {
   return (
 
+    <div className="navbar">
+
+      <img
+        src="https://via.placeholder.com/200x100"
+        onClick={() => setOnHomePage(true)}
+      />
+
       <div className="search">
-
-        {/*<h1>Kanji App</h1>*/}
-
-        
 
         <input
           value={searchTerm}
@@ -18,6 +21,7 @@ const NavBar = ({searchTerm, setSearchTerm, searchSingleKanji}) => {
           Search</button>
 
       </div>
+    </div>
   );
 }
 
