@@ -1,5 +1,6 @@
 body {
   font-family: sans-serif;
+  background-color: gray;
 }
 
 .app {
@@ -23,10 +24,12 @@ h1 {
 
 .search input {
   flex: 1;
+  font-size: 1.5rem;
 }
 
 .search button {
   cursor: pointer;
+  height: 2rem;
 }
 
 .kanjiBlock {
@@ -35,6 +38,7 @@ h1 {
   justify-content: flex-start;
   align-items: flex-start;
   flex-direction: row;
+  background: darkgray;
 }
 
 .kanjiBlock .divider{
