@@ -5,7 +5,9 @@ const NavBar = ({searchTerm, setSearchTerm, searchSingleKanji}) => {
 
       <div className="search">
 
-        <h1>Kanji App</h1>
+        {/*<h1>Kanji App</h1>*/}
+
+        
 
         <input
           value={searchTerm}
