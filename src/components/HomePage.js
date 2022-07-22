@@ -8,6 +8,7 @@ function HomePage() {
         <p>Project by Matthew Low</p>
         <p>API provided by Kanji Alive</p>
         <p>Source code here</p>
+        <p>Incomplete database: does not contain all Joyou Kanji.</p>
       </div>
     </div>
   );

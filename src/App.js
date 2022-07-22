@@ -27,12 +27,14 @@ function App() {
     const response = await fetch(`${API_URL}${k}`, HEADERS);
     const data = await response.json()
     console.log(data)
-
+    /*
     if (!data.kanji) {
       setKanji(data);
     } else {
       setKanji(data.kanji);
     }
+    */
+    setKanji(data);
 
     setOnHomePage(false);
   }
@@ -49,7 +51,7 @@ function App() {
 
     { onHomePage ? (
       <HomePage />
-    ): ( <KanjiBox kanji={kanji}/> )
+    ): ( <KanjiBox kanjidata={kanji}/> )
     }
 
     {/*
