@@ -1,4 +1,5 @@
 import React from 'react';
+import SearchIcon from './search.svg';
 
 const NavBar = ({searchTerm, setSearchTerm, searchSingleKanji, setOnHomePage}) => {
   return (
@@ -10,13 +11,22 @@ const NavBar = ({searchTerm, setSearchTerm, searchSingleKanji, setOnHomePage}) =
           onClick={() => setOnHomePage(true)}
         />
 
-        <input
-          value={searchTerm}
-          onChange={(e) => setSearchTerm(e.target.value)}
-          placeholder="Search Kanji"
-        />
-        <button onClick={() => searchSingleKanji(searchTerm)}>
-          Search</button>
+        <div className="search">
+          <input
+            value={searchTerm}
+            onChange={(e) => setSearchTerm(e.target.value)}
+            placeholder="Search Kanji"
+          />
+          <img
+            src={SearchIcon}
+            alt='search'
+            onClick={() => searchSingleKanji(searchTerm)}
+          />
+          {/*
+            <button onClick={() => searchSingleKanji(searchTerm)}>
+            Search</button>
+          */}
+        </div>
 
       </div>
     </div>
