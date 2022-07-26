@@ -18,7 +18,10 @@ body {
 }
 
 p {
-  padding: 0;
+  margin: 0;
+}
+
+ul {
   margin: 0;
 }
 
@@ -55,13 +58,14 @@ p {
 .searchbar {
   width: 35%;
   padding-left: 0px;
+  padding: 3px;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
   border-style: solid;
-  border-radius: 10px;
-  border-width: 3px;
+  border-radius: 0.5rem;
+  border-width: 0.2rem;
 }
 
 .searchbar input {
@@ -89,11 +93,12 @@ p {
   padding: 2rem;
   margin-bottom: 2rem;
   display: flex;
+  flex-direction: column;
   justify-content: flex-start;
   align-content: flex-start;
   align-items: flex-start;
   flex-wrap: wrap;
-  border-radius: 2rem;
+  border-radius: 1rem;
   background-color: var(--post-color);
 }
 
@@ -103,12 +108,67 @@ p {
   padding: 2rem;
   margin-bottom: 2rem;
   display: flex;
+  flex-direction: column;
   justify-content: flex-start;
   align-content: flex-start;
   align-items: flex-start;
   flex-wrap: wrap;
-  border-radius: 2rem;
+  border-radius: 1rem;
   background-color: var(--post-color);
+}
+
+.ctr-kanji {
+  width: 60%;
+  margin-bottom: 2rem;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  display: flex;
+  flex-direction: row;
+  justify-content:  flex-start;
+  align-content: flex-start;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  border-radius: 1rem;
+  background-color: var(--post-color);
+}
+
+.ctr-kanji img {
+  height: 15rem;
+  width: 15rem;
+  border-radius: 0.5rem;
+  background-color: var(--ft-color);
+}
+
+.ctr-kanji p {
+  padding-right: 1rem;
+  padding-left: 2rem;
+  /*border-style: solid;*/
+}
+
+.kanjifonts {
+  font-size: 4rem;
+  padding: 0rem;
+  border-style: solid;
+}
+
+.strokeseq {
+  width: 65%;
+  padding: 1rem;
+  padding-right: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  border-style: solid;
+}
+
+.strokeseq img {
+  width: 100px;
+  height: 100px;
+  margin: 2px;
+  padding: 0;
+  border-radius: 5px;
 }
 
 /*

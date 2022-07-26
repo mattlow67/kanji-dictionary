@@ -2,48 +2,68 @@ import React from 'react';
 
 function KanjiBox({ kanjidata }) {
   return (
-    <div className='container'>
+    <div className='ctr-kanji'>
 
       { kanjidata.kanji ? (
 
-          <div className="kanjibox">
+        <>
 
-            <img
-              src={kanjidata.kanji.video.poster ? kanjidata.kanji.video.poster : "https://via.placeholder.com/300"}
-              alt="No Image Found"
-            />
+          <img
+            src={kanjidata.kanji.video.poster ? kanjidata.kanji.video.poster : "https://via.placeholder.com/300"}
+            alt="No Image Found"
+          />
 
+          <p>
+            {/*Character: {kanjidata.kanji.character}
+            <br />*/}Meaning: {kanjidata.kanji.meaning.english}
+            <br />Kunyomi: {kanjidata.kanji.kunyomi.hiragana}
+            <br />Onyomi: {kanjidata.kanji.onyomi.katakana}
+          </p>
+
+          <p>
+            Grade: {kanjidata.references.grade}
+            <br />Kodansha: {kanjidata.references.kodansha}
+            <br />Nelson: {kanjidata.references.classic_nelson}
+          </p>
+
+          <p>
+            Examples:
+            {(() => {
+              const examples = [];
+              for (let i = 0; i < kanjidata.examples.length && i < 6; i++) {
+                examples.push(<><br />{kanjidata.examples[i].japanese}</>);
+              }
+              return examples;
+            })()}
+
+          </p>
+
+          <div className='kanjifonts'>
             <p>
-              Character: {kanjidata.kanji.character}
-              <br/>Meaning: {kanjidata.kanji.meaning.english}
-              <br/>Kunyomi: {kanjidata.kanji.kunyomi.hiragana}
-              <br/>Onyomi: {kanjidata.kanji.onyomi.katakana}
+              {kanjidata.kanji.character}    {kanjidata.kanji.character}
+              <br />
+              {kanjidata.kanji.character}    {kanjidata.kanji.character}
             </p>
-
-            <ul>
-              <li>Grade: {kanjidata.references.grade}</li>
-              <li>Kodansha: {kanjidata.references.kodansha}</li>
-              <li>Nelson: {kanjidata.references.classic_nelson}</li>
-            </ul>
-
-            <ul>
-
-              {(() => {
-                const examples = [];
-                for (let i = 0; i < kanjidata.examples.length && i < 6; i++) {
-                  examples.push(<li>{kanjidata.examples[i].japanese}</li>);
-                }
-                return examples;
-              })()}
-
-            </ul>
-
           </div>
+
+          <div className='strokeseq'>
+            {(() => {
+              const stkseq = [];
+              for (let i = 0; i < kanjidata.kanji.strokes.images.length; i++) {
+                stkseq.push(<><img
+                  src={kanjidata.kanji.strokes.images[i] ? kanjidata.kanji.strokes.images[i] : 'https://via.palceholder.com/100'}
+                  alt='kanji' /></>);
+              }
+              return stkseq;
+            })()}
+          </div>
+
+        </>
 
         ): (
-          <div>
-            <p>no results found</p>
-          </div>
+          <>
+            <p>No results found.</p>
+          </>
           )
       }
 
