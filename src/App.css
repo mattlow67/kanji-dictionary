@@ -3,70 +3,114 @@
   align-items: cross axis
 */
 
+:root {
+  --bg-color: #313b55;
+  --ft-color: seashell;
+  --post-color: #3f4b6d
+}
+
 body {
   font-family: sans-serif;
-  color: black;
-  background-color: #131313;
+  font-size: 16px;
+  color: var(--ft-color);
+  background-color: var(--bg-color);
+
+}
+
+p {
+  padding: 0;
+  margin: 0;
 }
 
 .app {
-  padding: 0rem;
   display: flex;
+  flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  flex-direction: column;
 }
 
-.container {
-  width: 70%;
-  margin: 0.5rem;
-  border-radius: 1rem;
-  padding: 1rem;
-  background-color: gray;
+.ctr-navbar {
+  width: 50%;
+  margin-bottom: 2rem;
+  margin-top: 2rem;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
-
-.navbar {
-  display: flex;
-  justify-content: center;
-  align-items: flex-end;
   flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  /*
+  border-style: solid;
+  border-color: black;
+  */
 }
 
-.navbar img {
+.ctr-navbar h1 {
+  font-size: 2.5rem;
+  order: -1;
+  margin: 0px;
+  padding: 0px;
   cursor: pointer;
+  /*border-style: solid;*/
 }
 
-.navbar button {
-  cursor: pointer;
-}
-
-.navbar input {
-  font-size: 1rem;
-}
-
-.homepage {
+.searchbar {
+  width: 35%;
+  padding-left: 0px;
   display: flex;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
+  border-style: solid;
+  border-radius: 10px;
+  border-width: 3px;
 }
 
-.kanjibox {
+.searchbar input {
+  max-width: 100%;
+  font-size: 1.5rem;
+  color: var(--ft-color);
+  position: relative;
+  padding-left: 1rem;
+  border: none;
+  outline: none;
+  background-color: transparent;
+}
+
+.searchbar img {
+  width: 2rem;
+  height: 2rem;
+
+  position: absolute;
+  padding-left: 15%;
+}
+
+.ctr-main {
+  width: 60%;
+  margin-bottom: 2rem;
+  padding: 2rem;
+  margin-bottom: 2rem;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
+  align-content: flex-start;
   align-items: flex-start;
-  flex-direction: row;
-  align-content: space-between;
+  flex-wrap: wrap;
+  border-radius: 2rem;
+  background-color: var(--post-color);
 }
 
-.kanjibox img {
-  height: 200px;
-  width: 200px;
+.ctr-homepage {
+  width: 60%;
+  margin-bottom: 2rem;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  display: flex;
+  justify-content: flex-start;
+  align-content: flex-start;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  border-radius: 2rem;
+  background-color: var(--post-color);
 }
+
 /*
 .container {
   width: 80%;
