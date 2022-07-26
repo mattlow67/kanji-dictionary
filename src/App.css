@@ -27,10 +27,7 @@ body {
 
 p {
   margin: 0;
-}
-
-ul {
-  margin: 0;
+  padding: 0;
 }
 
 .app {
@@ -148,14 +145,22 @@ ul {
 
 .ctr-kanji p {
   padding-right: 0rem;
-  padding-left: 1rem;
+  padding-left: 0rem;
   outline-style: var(--out-style);
+}
+
+.kanjilarge {
+  font-size: 15rem;
+  padding: 0rem;
+  outline-style: var(--out-style);
+  line-height: 15rem;
 }
 
 .kanjifonts {
   font-size: 4rem;
-  padding: 0rem;
+  padding-top: 1rem;
   outline-style: var(--out-style);
+  line-height: 4rem;
 }
 
 .strokeseq {
@@ -184,8 +189,28 @@ ul {
   justify-content: flex-start;
   align-items: flex-start;
   flex-wrap: wrap;
-  align-content: space-between;
   outline-style: var(--out-style);
+}
+
+.ctr-row2 {
+  display: flex;
+  flex-directions: row;
+  justify-content: center;
+  align-items: center;
+  outline-style: var(--out-style);
+}
+
+.kanjiinfo {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  outline-style: var(--out-style);
+}
+
+.kanjiinfo p {
+  margin-left: 2rem;
 }
 
 /*

@@ -8,63 +8,82 @@ function KanjiBox({ kanjidata }) {
 
         <>
         <div className='ctr-row1'>
-
+            {/*
             <img
               src={kanjidata.kanji.video.poster ? kanjidata.kanji.video.poster : "https://via.placeholder.com/300"}
               alt="No Image Found"
             />
-
+            */}
+            {/*
             <div className='kanjifonts'>
-              <p>
                 {kanjidata.kanji.character}    {kanjidata.kanji.character}
                 <br />
                 {kanjidata.kanji.character}    {kanjidata.kanji.character}
-              </p>
+            </div>
+            */}
+
+            <div className='kanjilarge'>
+                {kanjidata.kanji.character}
             </div>
 
-            <p>
-              {/*Character: {kanjidata.kanji.character}
-              <br />*/}Meaning: {kanjidata.kanji.meaning.english}
-              <br />Kunyomi: {kanjidata.kanji.kunyomi.hiragana}
-              <br />Onyomi: {kanjidata.kanji.onyomi.katakana}
+            <div className='kanjiinfo'>
+              <p>
+                {/*Character: {kanjidata.kanji.character}
+                <br />*/}Meaning: {kanjidata.kanji.meaning.english}
+                <br />Kunyomi: {kanjidata.kanji.kunyomi.hiragana}
+                <br />Onyomi: {kanjidata.kanji.onyomi.katakana}
 
-              <br />Grade: {kanjidata.references.grade}
-              <br />Kodansha: {kanjidata.references.kodansha}
-              <br />Nelson: {kanjidata.references.classic_nelson}
-            </p>
+                <div className='kanjifonts'>
+                    {kanjidata.kanji.character}{kanjidata.kanji.character}
+                    <br />{kanjidata.kanji.character}{kanjidata.kanji.character}
 
-            <p>
-              Examples:
-              {(() => {
-                const examples = [];
-                for (let i = 0; i < kanjidata.examples.length && i < 6; i++) {
-                  examples.push(<><br />{kanjidata.examples[i].japanese}</>);
-                }
-                return examples;
-              })()}
+                  </div>
+              </p>
 
-            </p>
+              <p>
+                Grade: {kanjidata.references.grade}
+                <br />Kodansha: {kanjidata.references.kodansha}
+                <br />Nelson: {kanjidata.references.classic_nelson}
+              </p>
 
+              <p>
+                Examples:
+                {(() => {
+                  const examples = [];
+                  for (let i = 0; i < kanjidata.examples.length && i < 6; i++) {
+                    examples.push(<><br />{kanjidata.examples[i].japanese}</>);
+                  }
+                  return examples;
+                })()}
+
+              </p>
+
+            </div>
           </div>  {/*ctr-row1*/}
 
-          <div className='kanjifonts'>
-            <p>
-              {kanjidata.kanji.character}    {kanjidata.kanji.character}
-              <br />
-              {kanjidata.kanji.character}    {kanjidata.kanji.character}
-            </p>
-          </div>
+          <div className='ctr-row2'>
 
-          <div className='strokeseq'>
-            {(() => {
-              const stkseq = [];
-              for (let i = 0; i < kanjidata.kanji.strokes.images.length; i++) {
-                stkseq.push(<><img
-                  src={kanjidata.kanji.strokes.images[i] ? kanjidata.kanji.strokes.images[i] : 'https://via.palceholder.com/100'}
-                  alt='kanji' /></>);
-              }
-              return stkseq;
-            })()}
+            <video controls width="160">
+              <source src={kanjidata.kanji.video.webm}
+                      type="video/webm" />
+              <source src={kanjidata.kanji.video.mp4}
+                      type="video/mp4" />
+              Sorry, your browser doesn't support embedded videos.
+            </video>
+
+            <div className='strokeseq'>
+              {(() => {
+                const stkseq = [];
+                for (let i = 0; i < kanjidata.kanji.strokes.images.length; i++) {
+                  stkseq.push(<><img
+                    src={kanjidata.kanji.strokes.images[i] ? kanjidata.kanji.strokes.images[i] : 'https://via.palceholder.com/100'}
+                    alt='kanji' /></>);
+                }
+                return stkseq;
+              })()}
+            </div>
+
+
           </div>
 
         </>
