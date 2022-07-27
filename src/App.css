@@ -14,7 +14,7 @@
   --bg-color: #313b55;
   --ft-color: seashell;
   --post-color: #3f4b6d;
-  --out-style: none;
+  --out-style: solid;
 }
 
 body {
@@ -42,8 +42,8 @@ p {
   margin-bottom: 2rem;
   margin-top: 2rem;
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  flex-direction: column;
+  justify-content: flex-start;
   align-items: center;
   /*
   border-style: solid;
@@ -63,7 +63,7 @@ p {
 .searchbar {
   width: 35%;
   padding-left: 0px;
-  padding: 3px;
+  margin-top: 0.5rem;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -213,7 +213,7 @@ p {
 }
 
 .kanjiinfo p {
-  max-width: 35%;
+  max-width: 40%;
   word-wrap: break-all;
   margin-left: 1rem;
 }
