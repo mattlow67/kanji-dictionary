@@ -251,5 +251,14 @@ p {
 }
 
 .footer {
+  width: 12%;
   font-size: 14px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.footer p {
+  cursor: pointer;
 }

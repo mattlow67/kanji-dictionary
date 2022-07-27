@@ -51,7 +51,8 @@ function App() {
     }
 
     <div className="footer">
-      <p>About Source Code</p>
+      <p onClick={() => setOnHomePage(true)}>About</p>
+      <p>Source Code</p>
     </div>
 
   </div>
