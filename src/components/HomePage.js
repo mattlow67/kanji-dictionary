@@ -6,14 +6,14 @@ function HomePage() {
         <p>
           Welcome to Kanji Search!
           <br />Enter a single Kanji character in the search bar to retrieve information about it.
-          <br />Plase note that the database in incomplete. It currently contains only 1400 of 2200 Joyou Kanji.
-          <br />Here are some example Kanji you can search:
+          <br />Please note that the database is incomplete. It currently contains only 1,235 of 2,136 Jōyō Kanji.
+          <br />Here are some example Kanji you can search: 雨 気 国 城 難
           <br />
-          <br />Project by Matthew Low
-          <br />Source code available on GitHub
-          <br />API and database provided by Kanji Alive
-          <br />UX and functionality programmed with ReactJS
-          <br />UI designed with WebFlow
+          <br />Front end created by Matthew Low.
+          <br />Source code available on GitHub.
+          <br />API and database provided by Kanji Alive.
+          <br />UX and functionality programmed with ReactJS.
+          <br />UI designed with WebFlow.
         </p>
     </div>
   );

@@ -3,7 +3,7 @@
   align-items: cross axis
 */
 
-@import url('https://fonts.googleapis.com/css?family=Shippori+Mincho:400,500');
+@import url('https://fonts.googleapis.com/css?family=Shippori+Mincho:400,500,600,700,800');
 @import url('https://fonts.googleapis.com/css?family=Kosugi+Maru:400');
 @import url('https://fonts.googleapis.com/css?family=Noto+Sans+JP:100,300,400,500');
 @import url('https://fonts.googleapis.com/css?family=Noto+Serif+JP:100,300,400,500');
@@ -11,18 +11,17 @@
 
 
 :root {
-  --bg-color: #313b55;
+  --bg-color: #5e4623;
+  --post-color:   #8f7538 ;
   --ft-color: seashell;
-  --post-color: #3f4b6d;
-  --out-style: solid;
+  --out-style: none;
 }
 
 body {
-  font-family: sans-serif;
+  font-family: noto sans jp;
   font-size: 16px;
   color: var(--ft-color);
   background-color: var(--bg-color);
-
 }
 
 p {
@@ -52,7 +51,8 @@ p {
 }
 
 .ctr-navbar h1 {
-  font-size: 2.5rem;
+  font-size: 3rem;
+  font-family: noto serif jp;
   order: -1;
   margin: 0px;
   padding: 0px;
@@ -87,9 +87,10 @@ p {
 .searchbar img {
   width: 2rem;
   height: 2rem;
-
   position: absolute;
-  padding-left: 15%;
+  margin-left: 15%;
+  cursor: pointer;
+  outline-style: var(--out-style);
 }
 
 .ctr-main {
@@ -150,8 +151,10 @@ p {
 }
 
 .kanjilarge {
-  font-size: 14rem;
-  padding: 0rem;
+  font-size: 15rem;
+  font-family: shippori mincho;
+  font-weight: 400;
+  margin-top: -1rem;
   outline-style: var(--out-style);
   line-height: 14rem;
 }
@@ -165,8 +168,6 @@ p {
 
 .strokeseq {
   width: 65%;
-  padding: 1rem;
-  padding-right: 0;
   padding-left: 2rem;
   display: flex;
   flex-direction: row;
@@ -182,6 +183,7 @@ p {
   margin: 2px;
   padding: 0;
   border-radius: 5px;
+  background-color: var(--ft-color);
 }
 
 .ctr-row1 {
@@ -194,26 +196,24 @@ p {
 }
 
 .ctr-row2 {
-  padding-top: 2rem;
+  padding-top: 4rem;
   display: flex;
   flex-directions: row;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   outline-style: var(--out-style);
 }
 
 .kanjiinfo {
-  max-width: 75%;
+  max-width: 70%;
   display: flex;
   flex-direction: row;
-  justify-content: flex-start;
+  justify-content: space-between;
   align-items: flex-start;
-  flex-wrap: wrap;
   outline-style: var(--out-style);
 }
 
 .kanjiinfo p {
-  max-width: 40%;
   word-wrap: break-all;
   margin-left: 1rem;
 }

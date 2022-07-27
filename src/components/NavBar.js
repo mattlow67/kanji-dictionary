@@ -4,7 +4,7 @@ const NavBar = ({searchTerm, setSearchTerm, searchSingleKanji, setOnHomePage, se
   return (
     <div className="ctr-navbar">
 
-      <h1>漢字 Kanji Search</h1>
+      <h1 onClick={() => setOnHomePage(true)}>漢字 Kanji Search</h1>
 
       <div className="searchbar">
 
