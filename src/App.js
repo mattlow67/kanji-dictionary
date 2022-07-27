@@ -50,6 +50,10 @@ function App() {
     ): ( <KanjiBox kanjidata={kanji}/> )
     }
 
+    <div className="footer">
+      <p>About Source Code</p>
+    </div>
+
   </div>
 
   );
