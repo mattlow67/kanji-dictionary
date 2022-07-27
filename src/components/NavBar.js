@@ -1,34 +1,33 @@
 import React from 'react';
 import SearchIcon from './search.svg';
 
-const NavBar = ({searchTerm, setSearchTerm, searchSingleKanji, setOnHomePage}) => {
+const NavBar = ({searchTerm, setSearchTerm, searchSingleKanji, setOnHomePage, searchIcon}) => {
   return (
-    <div className="container">
-      <div className="navbar">
+    <div className="ctr-navbar">
 
-        <img
-          src="https://via.placeholder.com/200x100"
-          onClick={() => setOnHomePage(true)}
+      <h1 onClick={() => setOnHomePage(true)}>漢字 Kanji Search</h1>
+
+      <div className="searchbar">
+
+        <input
+          value={searchTerm}
+          onChange={(e) => setSearchTerm(e.target.value)}
+          placeholder="Search Kanji..."
         />
 
-        <div className="search">
-          <input
-            value={searchTerm}
-            onChange={(e) => setSearchTerm(e.target.value)}
-            placeholder="Search Kanji"
-          />
-          <img
-            src={SearchIcon}
-            alt='search'
-            onClick={() => searchSingleKanji(searchTerm)}
-          />
-          {/*
-            <button onClick={() => searchSingleKanji(searchTerm)}>
-            Search</button>
-          */}
-        </div>
+        <img
+          src={searchIcon}
+          alt="search"
+          onClick={() => searchSingleKanji(searchTerm)}
+        />
+      {/*
+        <button onClick={() => searchSingleKanji(searchTerm)}>
+          Search</button>
+      */}
 
       </div>
+
+
     </div>
   );
 }

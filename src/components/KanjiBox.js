@@ -2,48 +2,103 @@ import React from 'react';
 
 function KanjiBox({ kanjidata }) {
   return (
-    <div className='container'>
+    <div className='ctr-kanji'>
 
       { kanjidata.kanji ? (
 
-          <div className="kanjibox">
+        <>
+        <div className='ctr-row1'>
+          {/*
+          <img
+            src={kanjidata.kanji.video.poster ? kanjidata.kanji.video.poster : "https://via.placeholder.com/300"}
+            alt="No Image Found"
+          />
+          */}
+          {/*
+          <div className='kanjifonts'>
+              {kanjidata.kanji.character}    {kanjidata.kanji.character}
+              <br />
+              {kanjidata.kanji.character}    {kanjidata.kanji.character}
+          </div>
+          */}
 
-            <img
-              src={kanjidata.kanji.video.poster ? kanjidata.kanji.video.poster : "https://via.placeholder.com/300"}
-              alt="No Image Found"
-            />
+          <div className='kanjilarge'>
+              {kanjidata.kanji.character}
+          </div>
 
+          <div className='kanjiinfo'>
             <p>
-              Character: {kanjidata.kanji.character}
-              <br/>Meaning: {kanjidata.kanji.meaning.english}
-              <br/>Kunyomi: {kanjidata.kanji.kunyomi.hiragana}
-              <br/>Onyomi: {kanjidata.kanji.onyomi.katakana}
+              {/*Character: {kanjidata.kanji.character}
+              <br />*/}Meaning: {kanjidata.kanji.meaning.english}
+              <br />Kunyomi: {kanjidata.kanji.kunyomi.hiragana}
+              <br />Onyomi: {kanjidata.kanji.onyomi.katakana}
+
+              {/*
+              <div className='kanjifonts'>
+                {kanjidata.kanji.character}{kanjidata.kanji.character}
+                <br />{kanjidata.kanji.character}{kanjidata.kanji.character}
+              </div>
+              */}
             </p>
 
-            <ul>
-              <li>Grade: {kanjidata.references.grade}</li>
-              <li>Kodansha: {kanjidata.references.kodansha}</li>
-              <li>Nelson: {kanjidata.references.classic_nelson}</li>
-            </ul>
+            <p>
+              Grade: {kanjidata.references.grade}
+              <br />Kodansha: {kanjidata.references.kodansha}
+              <br />Nelson: {kanjidata.references.classic_nelson}
+            </p>
 
-            <ul>
-
+            <p>
+              Examples:
               {(() => {
                 const examples = [];
                 for (let i = 0; i < kanjidata.examples.length && i < 6; i++) {
-                  examples.push(<li>{kanjidata.examples[i].japanese}</li>);
+                  examples.push(<><br />{kanjidata.examples[i].japanese}</>);
                 }
                 return examples;
               })()}
 
-            </ul>
+            </p>
+          </div> {/*kanjiinfo*/}
+        </div>  {/*ctr-row1*/}
 
+          <div className='ctr-row2'>
+
+            <div className='strokevid'>
+
+              <video controls width="160">
+                <source src={kanjidata.kanji.video.webm}
+                        type="video/webm" />
+                <source src={kanjidata.kanji.video.mp4}
+                        type="video/mp4" />
+                Sorry, your browser doesn't support embedded videos.
+              </video>
+
+              <p>
+                Stroke Count: {kanjidata.kanji.strokes.count}
+                <br />Radical: {kanjidata.radical.character}
+              </p>
+
+            </div>
+
+            <div className='strokeseq'>
+              {(() => {
+                const stkseq = [];
+                for (let i = 0; i < kanjidata.kanji.strokes.images.length; i++) {
+                  stkseq.push(<><img
+                    src={kanjidata.kanji.strokes.images[i] ? kanjidata.kanji.strokes.images[i] : 'https://via.palceholder.com/100'}
+                    alt='kanji' /></>);
+                }
+                return stkseq;
+              })()}
+
+            </div>
           </div>
+        </>
 
         ): (
-          <div>
-            <p>no results found</p>
-          </div>
+          <>
+            <p>No results found.</p>
+          </>
           )
       }
 

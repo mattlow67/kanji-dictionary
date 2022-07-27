@@ -3,6 +3,7 @@ import './App.css';
 import NavBar from './components/NavBar';
 import HomePage from './components/HomePage';
 import KanjiBox from './components/KanjiBox';
+import SearchIcon from './search.svg';
 
 const API_URL = 'https://kanjialive-api.p.rapidapi.com/api/public/kanji/';
 const HEADERS = {
@@ -27,13 +28,7 @@ function App() {
     const response = await fetch(`${API_URL}${k}`, HEADERS);
     const data = await response.json()
     console.log(data)
-    /*
-    if (!data.kanji) {
-      setKanji(data);
-    } else {
-      setKanji(data.kanji);
-    }
-    */
+
     setKanji(data);
 
     setOnHomePage(false);
@@ -47,6 +42,7 @@ function App() {
         setSearchTerm={setSearchTerm}
         searchSingleKanji={searchSingleKanji}
         setOnHomePage={setOnHomePage}
+        searchIcon={SearchIcon}
       />
 
     { onHomePage ? (
@@ -54,33 +50,8 @@ function App() {
     ): ( <KanjiBox kanjidata={kanji}/> )
     }
 
-    {/*
-    {
-      onHomePage ? (
-        <HomePage />
-      ): ( kanji.character ? (
-            <div className="kanjiBlock">
-              <img
-                src={kanji.video.poster ? kanji.video.poster : "https://via.placeholder.com/300"}
-                alt="No Image Found"
-              />
-              <div className="divider">
-                <p>Character: {kanji.character}</p>
-                <p>Meaning: {kanji.meaning.english}</p>
-                <p>Kunyomi: {kanji.kunyomi.hiragana}</p>
-                <p>Onyomi: {kanji.onyomi.katakana}</p>
-              </div>
+  </div>
 
-            </div>
-          ): (
-            <div>
-              <p>no results found</p>
-            </div>
-          )
-        )
-    }
-    */}
-    </div>
   );
 };
 
