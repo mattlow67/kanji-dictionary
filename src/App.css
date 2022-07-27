@@ -150,10 +150,10 @@ p {
 }
 
 .kanjilarge {
-  font-size: 15rem;
+  font-size: 14rem;
   padding: 0rem;
   outline-style: var(--out-style);
-  line-height: 15rem;
+  line-height: 14rem;
 }
 
 .kanjifonts {
@@ -167,6 +167,7 @@ p {
   width: 65%;
   padding: 1rem;
   padding-right: 0;
+  padding-left: 2rem;
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
@@ -193,6 +194,7 @@ p {
 }
 
 .ctr-row2 {
+  padding-top: 2rem;
   display: flex;
   flex-directions: row;
   justify-content: center;
@@ -201,6 +203,7 @@ p {
 }
 
 .kanjiinfo {
+  max-width: 75%;
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
@@ -210,7 +213,21 @@ p {
 }
 
 .kanjiinfo p {
-  margin-left: 2rem;
+  max-width: 35%;
+  word-wrap: break-all;
+  margin-left: 1rem;
+}
+
+.strokevid {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  outline-style: var(--out-style);
+}
+
+.strokevid p {
+  padding-top: 0.5rem;
 }
 
 /*

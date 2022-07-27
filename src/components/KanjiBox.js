@@ -8,68 +8,77 @@ function KanjiBox({ kanjidata }) {
 
         <>
         <div className='ctr-row1'>
-            {/*
-            <img
-              src={kanjidata.kanji.video.poster ? kanjidata.kanji.video.poster : "https://via.placeholder.com/300"}
-              alt="No Image Found"
-            />
-            */}
-            {/*
-            <div className='kanjifonts'>
-                {kanjidata.kanji.character}    {kanjidata.kanji.character}
-                <br />
-                {kanjidata.kanji.character}    {kanjidata.kanji.character}
-            </div>
-            */}
+          {/*
+          <img
+            src={kanjidata.kanji.video.poster ? kanjidata.kanji.video.poster : "https://via.placeholder.com/300"}
+            alt="No Image Found"
+          />
+          */}
+          {/*
+          <div className='kanjifonts'>
+              {kanjidata.kanji.character}    {kanjidata.kanji.character}
+              <br />
+              {kanjidata.kanji.character}    {kanjidata.kanji.character}
+          </div>
+          */}
 
-            <div className='kanjilarge'>
-                {kanjidata.kanji.character}
-            </div>
+          <div className='kanjilarge'>
+              {kanjidata.kanji.character}
+          </div>
 
-            <div className='kanjiinfo'>
-              <p>
-                {/*Character: {kanjidata.kanji.character}
-                <br />*/}Meaning: {kanjidata.kanji.meaning.english}
-                <br />Kunyomi: {kanjidata.kanji.kunyomi.hiragana}
-                <br />Onyomi: {kanjidata.kanji.onyomi.katakana}
+          <div className='kanjiinfo'>
+            <p>
+              {/*Character: {kanjidata.kanji.character}
+              <br />*/}Meaning: {kanjidata.kanji.meaning.english}
+              <br />Kunyomi: {kanjidata.kanji.kunyomi.hiragana}
+              <br />Onyomi: {kanjidata.kanji.onyomi.katakana}
 
-                <div className='kanjifonts'>
-                    {kanjidata.kanji.character}{kanjidata.kanji.character}
-                    <br />{kanjidata.kanji.character}{kanjidata.kanji.character}
+              {/*
+              <div className='kanjifonts'>
+                {kanjidata.kanji.character}{kanjidata.kanji.character}
+                <br />{kanjidata.kanji.character}{kanjidata.kanji.character}
+              </div>
+              */}
+            </p>
 
-                  </div>
-              </p>
+            <p>
+              Grade: {kanjidata.references.grade}
+              <br />Kodansha: {kanjidata.references.kodansha}
+              <br />Nelson: {kanjidata.references.classic_nelson}
+            </p>
 
-              <p>
-                Grade: {kanjidata.references.grade}
-                <br />Kodansha: {kanjidata.references.kodansha}
-                <br />Nelson: {kanjidata.references.classic_nelson}
-              </p>
+            <p>
+              Examples:
+              {(() => {
+                const examples = [];
+                for (let i = 0; i < kanjidata.examples.length && i < 6; i++) {
+                  examples.push(<><br />{kanjidata.examples[i].japanese}</>);
+                }
+                return examples;
+              })()}
 
-              <p>
-                Examples:
-                {(() => {
-                  const examples = [];
-                  for (let i = 0; i < kanjidata.examples.length && i < 6; i++) {
-                    examples.push(<><br />{kanjidata.examples[i].japanese}</>);
-                  }
-                  return examples;
-                })()}
-
-              </p>
-
-            </div>
-          </div>  {/*ctr-row1*/}
+            </p>
+          </div> {/*kanjiinfo*/}
+        </div>  {/*ctr-row1*/}
 
           <div className='ctr-row2'>
 
-            <video controls width="160">
-              <source src={kanjidata.kanji.video.webm}
-                      type="video/webm" />
-              <source src={kanjidata.kanji.video.mp4}
-                      type="video/mp4" />
-              Sorry, your browser doesn't support embedded videos.
-            </video>
+            <div className='strokevid'>
+
+              <video controls width="160">
+                <source src={kanjidata.kanji.video.webm}
+                        type="video/webm" />
+                <source src={kanjidata.kanji.video.mp4}
+                        type="video/mp4" />
+                Sorry, your browser doesn't support embedded videos.
+              </video>
+
+              <p>
+                Stroke Count: {kanjidata.kanji.strokes.count}
+                <br />Radical: {kanjidata.radical.character}
+              </p>
+
+            </div>
 
             <div className='strokeseq'>
               {(() => {
@@ -81,11 +90,9 @@ function KanjiBox({ kanjidata }) {
                 }
                 return stkseq;
               })()}
+
             </div>
-
-
           </div>
-
         </>
 
         ): (
