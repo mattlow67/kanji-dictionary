@@ -65,7 +65,7 @@ function KanjiBox({ kanjidata }) {
 
             <div className='strokevid'>
 
-              <video controls width="160">
+              <video controls width="160" key={kanjidata.kanji.video.webm}>
                 <source src={kanjidata.kanji.video.webm}
                         type="video/webm" />
                 <source src={kanjidata.kanji.video.mp4}

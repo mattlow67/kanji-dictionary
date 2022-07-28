@@ -11,10 +11,11 @@
 
 
 :root {
-  --bg-color: #5e4623;
-  --post-color:   #8f7538 ;
-  --ft-color: seashell;
+  --bg-color: #71633f;
+  --post-color: #d8cca3;
+  --ft-color: #d8cca3;
   --out-style: none;
+  --post-ft-color: #2a2622;
 }
 
 body {
@@ -109,6 +110,7 @@ p {
 }
 
 .ctr-homepage {
+  color: var(--post-ft-color);
   width: 60%;
   margin-bottom: 2rem;
   padding: 2rem;
@@ -124,6 +126,7 @@ p {
 }
 
 .ctr-kanji {
+  color: var(--post-ft-color);
   width: 60%;
   margin-bottom: 2rem;
   padding: 2rem;
@@ -165,7 +168,6 @@ p {
   outline-style: var(--out-style);
   line-height: 4rem;
 }
-*/
 
 .search {
   width: 100%;
@@ -200,10 +202,16 @@ p {
 .strokeseq img {
   width: 100px;
   height: 100px;
-  margin: 2px;
   padding: 0;
-  border-radius: 5px;
-  background-color: var(--ft-color);
+  border-radius: 0px;
+  border-style: dotted;
+  border-width: 3px;
+  margin-top: -3px;
+  margin-left: -3px;
+  /* outline-style: solid;
+  outline-style: dotted;
+  outline-offset: -1px; */
+  background-color: none;
 }
 
 .ctr-row1 {
@@ -244,6 +252,11 @@ p {
   justify-content: center;
   align-items: center;
   outline-style: var(--out-style);
+}
+
+.strokevid video {
+  outline-style: dotted;
+  outline-color: var(--post-ft-color);
 }
 
 .strokevid p {
