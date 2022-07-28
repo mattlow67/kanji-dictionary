@@ -242,7 +242,6 @@ p {
 }
 
 .kanjiinfo p {
-  word-wrap: break-all;
   margin-left: 1rem;
 }
 
