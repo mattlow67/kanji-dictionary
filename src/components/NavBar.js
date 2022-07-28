@@ -1,5 +1,4 @@
 import React from 'react';
-import SearchIcon from './search.svg';
 
 const NavBar = ({searchTerm, setSearchTerm, searchSingleKanji, setOnHomePage, searchIcon}) => {
   return (
