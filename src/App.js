@@ -21,7 +21,7 @@ function App() {
 
   useEffect(() => {
     setOnHomePage(true);
-    document.title = "Kanji App"
+    document.title = "Kanji Info"
   }, []);
 
   const searchSingleKanji = async (k) => {
@@ -52,7 +52,12 @@ function App() {
 
     <div className="footer">
       <p onClick={() => setOnHomePage(true)}>About</p>
-      <p>Source Code</p>
+      <a href="https://github.com/mattlow67/kanji-search" target="_blank">
+        <p>Source Code</p>
+      </a>
+      <a href="https://kanjialive.com/" target="_blank">
+        <p>Kanji Alive</p>
+      </a>
     </div>
 
   </div>
