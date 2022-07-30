@@ -7,7 +7,7 @@ function HomePage() {
           Welcome to Kanji Info!
           <br />Enter a single Kanji character in the search bar to retrieve information about it.
           <br />Please note that the database is incomplete. It currently contains only 1,235 Jōyō Kanji.
-          <br />Here are some example Kanji you can search: 雨 気 国 城 難
+          <br />Here are some example Kanji you can search: 雨 城 気 難 刀 猫 国 飯 画
           <br />
           <br />Front-end created by Matthew Low.
           <br />Source code available on GitHub.

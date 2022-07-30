@@ -29,7 +29,16 @@
   --post-color: white;
   --ft-color: black;
   --post-ft-color: black;
-  --out-style: none;
+  --out-style: ;
+}
+
+::placeholder {
+  color: lightgray;
+  opacity: 1;
+}
+
+::-ms-input-placeholder {
+  color: lightgray;
 }
 
 body {
@@ -83,12 +92,12 @@ a {
 
 .searchbar {
   color: var(--ft-color);
-  width: 35%;
+  width: 250px;
   padding-left: 0px;
   margin-top: 0.5rem;
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   border-style: solid;
   border-color: lightgray;
@@ -97,22 +106,22 @@ a {
 }
 
 .searchbar input {
-  max-width: 100%;
+  width: 100%;
   font-size: 1.5rem;
   line-height: 2rem;
   color: var(--ft-color);
   position: relative;
-  padding-left: 1rem;
+  padding-left: 15px;
   border: none;
   outline: none;
   background-color: transparent;
 }
 
 .searchbar img {
-  width: 2rem;
-  height: 2rem;
+  width: 32px;
+  height: 32px;
   position: absolute;
-  margin-left: 15%;
+  margin-left: 215px;
   cursor: pointer;
   outline-style: var(--out-style);
 }
@@ -180,7 +189,7 @@ a {
   font-size: 15rem;
   font-family: shippori mincho;
   font-weight: 400;
-  margin-top: -1.5rem;
+  margin-top: -1rem;
   outline-style: var(--out-style);
   line-height: 14rem;
 }
@@ -249,8 +258,8 @@ a {
 } */
 
 .strokeseq {
-  width: 65%;
-  padding-left: 2rem;
+  width: 71%;
+  padding-left: 0rem;
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
@@ -266,6 +275,7 @@ a {
   border-radius: 0px;
   border-style: dotted;
   border-width: 3px;
+  border-color: lightgray;
   margin-top: -3px;
   margin-left: -3px;
   /* outline-style: solid;
@@ -297,7 +307,7 @@ a {
 
 .strokevid video {
   outline-style: solid;
-  outline-color: gray;
+  outline-color: lightgray;
   outline-width: 2px;
   outline-color: var(--post-ft-color);
 }
@@ -307,11 +317,11 @@ a {
 }
 
 .footer {
-  width: 20%;
+  width: 250px;
   font-size: 14px;
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
 }
 
