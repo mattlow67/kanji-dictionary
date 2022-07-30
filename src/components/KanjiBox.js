@@ -26,6 +26,13 @@ function KanjiBox({ kanjidata }) {
               {kanjidata.kanji.character}
           </div>
 
+          <div className="kanjifonts">
+            <span className="kanjifonts1">{kanjidata.kanji.character}</span>
+            <span className="kanjifonts2">{kanjidata.kanji.character}</span>
+            <br /><span className="kanjifonts3">{kanjidata.kanji.character}</span>
+            <span className="kanjifonts4">{kanjidata.kanji.character}</span>
+          </div>
+
           <div className='kanjiinfo'>
             <p>
               {/*Character: {kanjidata.kanji.character}

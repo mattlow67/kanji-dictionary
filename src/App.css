@@ -6,7 +6,7 @@
 @import url('https://fonts.googleapis.com/css?family=Shippori+Mincho:400,500,600,700,800');
 @import url('https://fonts.googleapis.com/css?family=Kosugi+Maru:400');
 @import url('https://fonts.googleapis.com/css?family=Noto+Sans+JP:100,300,400,500');
-@import url('https://fonts.googleapis.com/css?family=Noto+Serif+JP:100,300,400,500');
+@import url('https://fonts.googleapis.com/css?family=Noto+Serif+JP:100,300,400,500,600,700,900');
 
 * {
   margin: 0;
@@ -15,18 +15,26 @@
   font-size: 100%;
   list-style: none;
 }
-
+/*
 :root {
   --bg-color: #71633f;
   --post-color: #d8cca3;
   --ft-color: #d8cca3;
   --out-style: none;
   --post-ft-color: #2a2622;
+} */
+
+:root {
+  --bg-color: white;
+  --post-color: white;
+  --ft-color: black;
+  --post-ft-color: black;
+  --out-style: none;
 }
 
 body {
   font-family: noto sans jp;
-  font-size: 16px;
+  font-size: 14px;
   color: var(--ft-color);
   background-color: var(--bg-color);
 }
@@ -65,6 +73,7 @@ a {
 .ctr-navbar h1 {
   font-size: 3rem;
   font-family: noto serif jp;
+  font-weight: 900;
   order: -1;
   margin: 0px;
   padding: 0px;
@@ -82,8 +91,9 @@ a {
   justify-content: center;
   align-items: center;
   border-style: solid;
-  border-radius: 0.5rem;
-  border-width: 0.2rem;
+  border-color: lightgray;
+  border-radius: 10px;
+  border-width: 3px;
 }
 
 .searchbar input {
@@ -107,7 +117,7 @@ a {
   outline-style: var(--out-style);
 }
 
-.ctr-main {
+/* .ctr-main {
   width: 60%;
   margin-bottom: 2rem;
   padding: 2rem;
@@ -120,36 +130,36 @@ a {
   flex-wrap: wrap;
   border-radius: 1rem;
   background-color: var(--post-color);
-}
+} */
 
 .ctr-homepage {
   color: var(--post-ft-color);
-  width: 900px;
+  width: 800px;
+  box-shadow: 0px 0px 10px 0px gray;
   margin-bottom: 2rem;
   padding: 2rem;
   margin-bottom: 2rem;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  align-content: flex-start;
-  align-items: flex-start;
-  flex-wrap: wrap;
-  border-radius: 1rem;
+  align-content: space-between;
+  border-radius: 5px;
   background-color: var(--post-color);
 }
 
 .ctr-kanji {
   color: var(--post-ft-color);
-  width: 60%;
+  width: 1000px;
+  box-shadow: 0px 0px 10px 0px gray;
   margin-bottom: 2rem;
   padding: 2rem;
   margin-bottom: 2rem;
   display: flex;
   flex-direction: row;
-  justify-content:  flex-start;
+  justify-content: space-around;
   align-content: flex-start;
   flex-wrap: wrap;
-  border-radius: 1rem;
+  border-radius: 5px;
   background-color: var(--post-color);
 }
 
@@ -157,7 +167,7 @@ a {
   height: 15rem;
   width: 15rem;
   border-radius: 0.5rem;
-  background-color: var(--ft-color);
+  /* background-color: var(--ft-color); */
 }
 
 .ctr-kanji p {
@@ -170,19 +180,57 @@ a {
   font-size: 15rem;
   font-family: shippori mincho;
   font-weight: 400;
-  margin-top: -1rem;
+  margin-top: -1.5rem;
   outline-style: var(--out-style);
   line-height: 14rem;
 }
 
 .kanjifonts {
   font-size: 4rem;
-  padding-top: 1rem;
   outline-style: var(--out-style);
   line-height: 4rem;
 }
 
-.search {
+.kanjifonts1 {
+  font-family: shippori mincho;
+  font-weight: 500;
+}
+
+.kanjifonts2 {
+  font-family: noto serif jp;
+  font-weight: 500;
+}
+
+.kanjifonts3 {
+  font-family: noto sans jp;
+  font-weight: 500;
+}
+
+.kanjifonts4 {
+  font-family: kosugi maru;
+  font-weight: 400;
+}
+
+.ctr-row1 {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  outline-style: var(--out-style);
+}
+
+.ctr-row2 {
+  padding-top: 4rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: flex-start;
+  outline-style: var(--out-style);
+}
+
+/* .search {
   width: 100%;
 }
 
@@ -198,8 +246,7 @@ a {
   width: 1.5rem;
   height: 1.5rem;
   cursor: pointer;
-}
-
+} */
 
 .strokeseq {
   width: 65%;
@@ -224,32 +271,14 @@ a {
   /* outline-style: solid;
   outline-style: dotted;
   outline-offset: -1px; */
-  background-color: seashell;
-}
-
-.ctr-row1 {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  align-items: flex-start;
-  flex-wrap: wrap;
-  outline-style: var(--out-style);
-}
-
-.ctr-row2 {
-  padding-top: 4rem;
-  display: flex;
-  flex-directions: row;
-  justify-content: center;
-  align-items: flex-start;
-  outline-style: var(--out-style);
+  /* background-color: seashell; */
 }
 
 .kanjiinfo {
-  max-width: 70%;
+  width: 55%;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: flex-start;
   outline-style: var(--out-style);
 }
@@ -267,7 +296,9 @@ a {
 }
 
 .strokevid video {
-  outline-style: dotted;
+  outline-style: solid;
+  outline-color: gray;
+  outline-width: 2px;
   outline-color: var(--post-ft-color);
 }
 
@@ -286,4 +317,5 @@ a {
 
 .footer p {
   cursor: pointer;
+  margin-bottom: 2rem;
 }
