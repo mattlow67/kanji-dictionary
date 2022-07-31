@@ -13,5 +13,5 @@ An online dictionary and tool for researching and discovering Kanji.
 ## To Do
 * Keep styling consistent between browsers
 * Use fixed sizes for containers
-* Trigger "enter" button in input field
 * Change routing to separate web pages
+* h1 header static size

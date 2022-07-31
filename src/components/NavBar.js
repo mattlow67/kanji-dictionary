@@ -12,6 +12,9 @@ const NavBar = ({searchTerm, setSearchTerm, searchSingleKanji, setOnHomePage, se
           value={searchTerm}
           onChange={(e) => setSearchTerm(e.target.value)}
           placeholder="Search Kanji..."
+          onKeyPress={(e) => {
+            if (e.key === "Enter") searchSingleKanji(searchTerm);
+          }}
         />
 
         <img

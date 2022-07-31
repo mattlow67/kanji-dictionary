@@ -8,19 +8,6 @@ function KanjiBox({ kanjidata }) {
 
         <>
         <div className='ctr-row1'>
-          {/*
-          <img
-            src={kanjidata.kanji.video.poster ? kanjidata.kanji.video.poster : "https://via.placeholder.com/300"}
-            alt="No Image Found"
-          />
-          */}
-          {/*
-          <div className='kanjifonts'>
-              {kanjidata.kanji.character}    {kanjidata.kanji.character}
-              <br />
-              {kanjidata.kanji.character}    {kanjidata.kanji.character}
-          </div>
-          */}
 
           <div className='kanjilarge'>
               {kanjidata.kanji.character}
