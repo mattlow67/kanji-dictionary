@@ -3,9 +3,7 @@ import React from 'react';
 const NavBar = ({searchTerm, setSearchTerm, searchSingleKanji, searchIcon}) => {
   return (
     <div className="ctr-navbar">
-
       <h1>漢字 Kanji Info</h1>
-
       <div className="searchbar">
 
         <input
@@ -22,14 +20,8 @@ const NavBar = ({searchTerm, setSearchTerm, searchSingleKanji, searchIcon}) => {
           alt="search"
           onClick={() => searchSingleKanji(searchTerm)}
         />
-      {/*
-        <button onClick={() => searchSingleKanji(searchTerm)}>
-          Search</button>
-      */}
 
       </div>
-
-
     </div>
   );
 }

@@ -28,10 +28,10 @@ const HEADERS = {
 function App() {
   const [kanji, setKanji] = useState([]);
   const [searchTerm, setSearchTerm] = useState("");
-  const [onHomePage, setOnHomePage] = useState(true);
 
   useEffect(() => {
-    //setOnHomePage(true);
+    //Default title "React App" still loads first
+    //Can be changed in public/index.html in <title></title>
     document.title = "Kanji Info"
   }, []);
 
@@ -39,10 +39,7 @@ function App() {
     const response = await fetch(`${API_URL}${k}`, HEADERS);
     const data = await response.json()
     console.log(data)
-
     setKanji(data);
-
-    //setOnHomePage(false);
   }
 
   return (
