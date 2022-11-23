@@ -15,3 +15,6 @@ An online dictionary and tool for researching and discovering Kanji.
 * Use fixed sizes for containers
 * Change routing to separate web pages
 * h1 header static size
+* Add page for search results
+* Change name to "Kanji Study"
+* Add user account functionality

@@ -1,10 +1,10 @@
 import React from 'react';
 
-const NavBar = ({searchTerm, setSearchTerm, searchSingleKanji, setOnHomePage, searchIcon}) => {
+const NavBar = ({searchTerm, setSearchTerm, searchSingleKanji, searchIcon}) => {
   return (
     <div className="ctr-navbar">
 
-      <h1 onClick={() => setOnHomePage(true)}>漢字 Kanji Info</h1>
+      <h1>漢字 Kanji Info</h1>
 
       <div className="searchbar">
 

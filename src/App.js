@@ -1,8 +1,19 @@
 import React, { useState, useEffect } from 'react';
+import {
+  BrowserRouter,
+  Switch,
+  Route,
+  Link,
+  useRouteMatch,
+  useParams,
+  Routes
+} from "react-router-dom";
+
 import './App.css';
 import NavBar from './components/NavBar';
 import HomePage from './components/HomePage';
 import KanjiBox from './components/KanjiBox';
+import Footer from './components/Footer';
 import SearchIcon from './search.svg';
 
 const API_URL = 'https://kanjialive-api.p.rapidapi.com/api/public/kanji/';
@@ -20,7 +31,7 @@ function App() {
   const [onHomePage, setOnHomePage] = useState(true);
 
   useEffect(() => {
-    setOnHomePage(true);
+    //setOnHomePage(true);
     document.title = "Kanji Info"
   }, []);
 
@@ -31,10 +42,30 @@ function App() {
 
     setKanji(data);
 
-    setOnHomePage(false);
+    //setOnHomePage(false);
   }
 
   return (
+
+    <BrowserRouter>
+      <div className="app">
+        <NavBar
+          searchTerm={searchTerm}
+          setSearchTerm={setSearchTerm}
+          searchSingleKanji={searchSingleKanji}
+          searchIcon={SearchIcon}
+        />
+
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/kanji" element={<KanjiBox />} />
+        </Routes>
+
+        <Footer />
+      </div>
+    </BrowserRouter>
+
+  /*
     <div className="app">
 
       <NavBar
@@ -61,6 +92,7 @@ function App() {
     </div>
 
   </div>
+  */
 
   );
 };
