@@ -14,6 +14,7 @@ function HomePage() {
           <br />API and database provided by Kanji Alive.
           <br />UX and functionality programmed with ReactJS.
           <br />UI designed with WebFlow.
+          <br />Routing branch.
         </p>
     </div>
   );
