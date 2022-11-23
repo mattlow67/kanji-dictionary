@@ -1,6 +1,9 @@
 import React from 'react';
+import { useParams } from 'react-router-dom';
 
 function KanjiBox({ kanjidata }) {
+  const { kanjiid } = useParams();
+
   return (
     <div className='ctr-kanji'>
 

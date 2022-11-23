@@ -6,7 +6,9 @@ import {
   Link,
   useRouteMatch,
   useParams,
-  Routes
+  Routes,
+  Navigate,
+  useNavigate,
 } from "react-router-dom";
 
 import './App.css';
@@ -33,12 +35,13 @@ function App() {
     //Default title "React App" still loads first
     //Can be changed in public/index.html in <title></title>
     document.title = "Kanji Info"
+
   }, []);
 
   const searchSingleKanji = async (k) => {
     const response = await fetch(`${API_URL}${k}`, HEADERS);
-    const data = await response.json()
-    console.log(data)
+    const data = await response.json();
+    console.log(data);
     setKanji(data);
   }
 
@@ -55,7 +58,8 @@ function App() {
 
         <Routes>
           <Route path="/" element={<HomePage />} />
-          <Route path="/kanji" element={<KanjiBox />} />
+          <Route path="/kanji" element={<KanjiBox kanjidata={kanji} />} />
+          <Route path="/kanji/:kanjiid" element={<KanjiBox kanjidata={kanji} />} />
         </Routes>
 
         <Footer />

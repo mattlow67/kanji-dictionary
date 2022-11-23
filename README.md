@@ -18,3 +18,4 @@ An online dictionary and tool for researching and discovering Kanji.
 * Add page for search results
 * Change name to "Kanji Study"
 * Add user account functionality
+* Persist states after refresh
