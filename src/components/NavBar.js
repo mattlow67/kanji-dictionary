@@ -5,7 +5,7 @@ const NavBar = ({searchTerm, setSearchTerm, searchSingleKanji, searchIcon}) => {
   const navigate = useNavigate()
   const handleClick = (term) => {
     searchSingleKanji(term);
-    if (term !== "") {
+    if (term) {
       navigate(`/kanji/${term}`);
     }
     else {

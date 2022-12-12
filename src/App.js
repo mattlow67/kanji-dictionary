@@ -15,6 +15,7 @@ import './App.css';
 import NavBar from './components/NavBar';
 import HomePage from './components/HomePage';
 import KanjiBox from './components/KanjiBox';
+import About from './components/About';
 import Footer from './components/Footer';
 import SearchIcon from './search.svg';
 
@@ -60,6 +61,7 @@ function App() {
           <Route path="/" element={<HomePage />} />
           <Route path="/kanji" element={<KanjiBox kanjidata={kanji} />} />
           <Route path="/kanji/:kanjiid" element={<KanjiBox kanjidata={kanji} />} />
+          <Route path="/about" element={<About />} />
         </Routes>
 
         <Footer />

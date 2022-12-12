@@ -57,6 +57,40 @@ a {
   align-items: center;
 }
 
+.container {
+  color: var(--post-ft-color);
+  width: 1000px;
+  box-shadow: 0px 0px 10px 0px gray;
+  margin-bottom: 2rem;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-content: space-between;
+  border-radius: 5px;
+  background-color: var(--post-color);
+}
+
+.homepage {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.homepage img{
+  max-width: 60%;
+}
+
+.homepagetext{
+  max-width: 35%;
+}
+
+.homepagekanji {
+  font-size: 18px;
+  text-align: center;
+}
+
 .ctr-navbar {
   width: 50%;
   margin-bottom: 2rem;
@@ -267,10 +301,9 @@ a {
 }
 
 .strokevid video {
-  outline-style: solid;
-  outline-color: lightgray;
-  outline-width: 2px;
-  outline-color: var(--post-ft-color);
+  border-style: dotted;
+  border-width: 3px;
+  border-color: lightgray;
 }
 
 .strokevid p {

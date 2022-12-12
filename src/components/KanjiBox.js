@@ -29,6 +29,8 @@ function KanjiBox({ kanjidata }) {
               <br />*/}Meaning: {kanjidata.kanji.meaning.english}
               <br />Kunyomi: {kanjidata.kanji.kunyomi.hiragana}
               <br />Onyomi: {kanjidata.kanji.onyomi.katakana}
+              <br />Stroke Count: {kanjidata.kanji.strokes.count}
+              <br />Radical: {kanjidata.radical.character}
 
               {/*
               <div className='kanjifonts'>
@@ -70,10 +72,12 @@ function KanjiBox({ kanjidata }) {
                 Sorry, your browser doesn't support embedded videos.
               </video>
 
+              {/*
               <p>
                 Stroke Count: {kanjidata.kanji.strokes.count}
                 <br />Radical: {kanjidata.radical.character}
               </p>
+              */}
 
             </div>
 

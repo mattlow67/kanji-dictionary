@@ -1,9 +1,12 @@
 import React from 'react';
+import { Link } from "react-router-dom";
 
 function Footer() {
     return (
     <div className="footer">
-      <p>About</p>
+      <Link to="/about">
+        <p>About</p>
+      </Link>
       <a href="https://github.com/mattlow67/kanji-search" target="_blank" rel="noreferrer">
         <p>Source Code</p>
       </a>
