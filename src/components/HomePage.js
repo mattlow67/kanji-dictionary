@@ -9,7 +9,7 @@ function HomePage() {
             Welcome to Kanji Info!
             <br /><br />Enter a single Kanji character in the search bar to retrieve information about it.
             <br /><br />Please note that the database is incomplete. It currently contains only 1,235 Jōyō Kanji.
-            <br /><br />Here are some Kanji you can search:
+            <br /><br />Here are some Kanji you can search
           </p>
           
           <div className="homepagekanji">
@@ -23,7 +23,7 @@ function HomePage() {
           </div>
         </div>
 
-        <img src="https://www.fluentu.com/blog/japanese/wp-content/uploads/sites/6/2014/05/how-to-learn-kanji.jpg" alt="https://via.placeholder.com/300" />
+        <img src="https://www.fluentu.com/blog/japanese/wp-content/uploads/sites/6/2014/05/how-to-learn-kanji.jpg" alt="https://via.placeholder.com/600" />
       
       </div>
     </div>

@@ -63,7 +63,6 @@ a {
   box-shadow: 0px 0px 10px 0px gray;
   margin-bottom: 2rem;
   padding: 2rem;
-  margin-bottom: 2rem;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -89,6 +88,20 @@ a {
 .homepagekanji {
   font-size: 18px;
   text-align: center;
+}
+
+.about {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.abouttext {
+  max-width: 45%;
+}
+
+.about img {
+  max-width: 45%;
 }
 
 .ctr-navbar {
