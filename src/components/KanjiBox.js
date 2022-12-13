@@ -13,7 +13,7 @@ function KanjiBox({ kanjidata }) {
         <div className='ctr-row1'>
 
           <div className='kanjilarge'>
-              {kanjidata.kanji.character}
+              {kanjiid}
           </div>
 
           <div className="kanjifonts">

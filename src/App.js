@@ -1,14 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import {
   BrowserRouter,
-  Switch,
   Route,
-  Link,
-  useRouteMatch,
-  useParams,
   Routes,
-  Navigate,
-  useNavigate,
 } from "react-router-dom";
 
 import './App.css';
